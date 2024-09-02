@@ -1,134 +1,168 @@
-/* CSS para un estilo moderno, futurista y brutalista */
-
 body {
-    background-color: #f0f0f0; /* Fondo gris claro para buen contraste */
-    color: #333333; /* Texto oscuro */
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #e0e0e0; /* Fondo monocromático claro */
+    margin: 10;
+    padding: 40px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 
-h1, h2 {
-    color: #000;
-    text-transform: uppercase;
-    margin: 20px 0;
-    letter-spacing: 2px;
-    padding-bottom: 10px;
-    border-bottom: 4px solid #000;
-    text-align: center; /* Alineación central para h2 y h1 */
+.recipe-container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto; /* Centrar el contenedor */
+    border: 8px solid #000;
+    max-width: 800px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: visible; /* Asegura que el contenido no se corte */
+    position: relative; /* Asegura que el contenedor respete su posición en el flujo del documento */
 }
 
+
 h1 {
-    font-size: 3rem;
+    font-size: 36px;
+    font-weight: 900; /* Tipografía fuerte */
+    margin-bottom: 20px;
+    color: #000;
+    text-transform: uppercase; /* Mayúsculas para un impacto mayor */
+    background-color: #ffcc00; /* Color de fondo llamativo */
+    padding: 20px;
+    border: 4px solid #000; /* Bordes gruesos en el título */
 }
 
 h2 {
-    font-size: 2.5rem; /* Tamaño de fuente mayor para h2 en la página principal */
+    font-size: 28px;
+    font-weight: 700;
+    margin: 40px 0 20px;
+    color: #000;
+    text-transform: uppercase;
+    background-color: #00ffcc; /* Color de fondo llamativo para subtítulos */
+    padding: 15px;
+    border: 4px solid #000;
+    text-align: center
 }
 
 ul, ol {
-    margin: 20px 0;
-    padding-left: 20px;
-    max-width: 600px;
-    width: 100%;
-    list-style: none;
-}
-
-ul li, ol li {
-    font-size: 1.5rem; /* Tamaño de fuente unificado para listas */
-    margin: 10px 0;
-    padding: 10px;
-    background-color: #ffffff;
-    border-left: 8px solid #000; /* Borde más grueso en las listas */
-    box-shadow: 4px 4px 0px #000;
-    text-align: center; /* Centrando el texto en las listas del home */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    width: 80%;
-    max-width: 600px;
-}
-
-ul li:hover, ol li:hover {
-    background-color: #000;
-    color: #ffffff;
-    transform: translate(-4px, -4px); /* Efecto de desplazamiento al hacer hover */
-}
-
-ul li a {
-    text-decoration: none;
-    color: #000;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-left: 40px;
+    text-align: left;
+    font-size: 18px;
     font-weight: bold;
+    color: #000;
 }
 
-ul li:hover a {
-    color: #ffffff;
+li {
+    margin-bottom: 10px;
 }
 
 img {
-    width: 100%;
-    max-width: 500px;
+    display: block;
+    margin: 20px auto;
+    border: 8px solid #000;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Asegura que la imagen cubra el área disponible */
+}
+
+
+
+
+
+.confirm, .cancel {
+    display: inline-block;
+    background: #ff0000; /* Color de fondo rojo fuerte */
+    color: #fff;
+    font-weight: bold;
+    padding: 15px 30px;
+    margin: 20px 10px;
+    text-transform: uppercase;
+    border: 4px solid #000; /* Bordes gruesos negros */
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.confirm:hover, .cancel:hover {
+    background-color: #000; /* Fondo negro al pasar el cursor */
+    color: #ff0000; /* Texto rojo para resaltar */
+}
+
+div.text {
+    color: #000;
+    font-size: 22px;
+    font-weight: 300; /* Texto más delgado */
     margin: 20px 0;
-    box-shadow: 10px 10px 0px #000;
+    border: 4px solid #000; /* Bordes gruesos */
+    padding: 20px;
+    background-color: #00ffcc; /* Fondo llamativo para destacar */
 }
 
-h2 + ul, h2 + ol {
-    border-top: 2px solid #000;
-    padding-top: 20px;
+div.text .child {
+    font-size: 18px;
+    font-weight: 700; /* Negrita para subtexto */
+    color: #000;
 }
 
-h2:last-of-type {
-    border-top: 2px solid #000;
-    padding-top: 20px;
-    margin-top: 40px;
+/* Estilos para la página de inicio (home) */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll; /* Asegura que haya desplazamiento vertical en toda la página */
 }
 
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
+.home-container {
+    background-color: #fff;
+    padding: 50px;
+    border: 8px solid #000; /* Bordes gruesos negros */
+    max-width: 500px;
     width: 100%;
-    height: 5px;
-    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra sutil */
 }
 
-h1::after {
-    content: '';
+h1 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+    background-color: #ffcc00; /* Fondo llamativo */
+    padding: 20px;
+    margin-bottom: 40px;
+    border: 4px solid #000; /* Bordes gruesos */
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #000; /* Fondo negro */
+    padding: 15px 30px;
+    border: 9px solid #000; /* Bordes gruesos */
+    font-size: 18px;
+    font-weight: bold;
     display: block;
-    width: 150px;
-    height: 4px;
-    background: #000;
-    margin: 10px auto 0;
+    transition: background-color 0.3s ease;
+    text-align: center
 }
 
-h2::before {
-    content: '>';
-    color: #ff0000;
-    margin-right: 10px;
+a:hover {
+    background-color: #ff0000; /* Rojo al pasar el cursor */
+    color: #fff;
 }
 
-h2::after {
-    content: '';
-    display: block;
-    width: 100px;
-    height: 2px;
-    background: #555;
-    margin-top: 10px;
-}
-
-ul li::before, ol li::before {
-    content: '+';
-    color: #ff0000;
-    font-size: 1.5rem;
-    margin-right: 10px;
-}
-
-h2:last-of-type::after {
-    content: '¡';
-    color: #ff0000;
-    font-size: 2rem;
-    margin-left: 10px;
+a:active {
+    background-color: #000;
+    color: #ffcc00; /* Texto amarillo al hacer clic */
 }
