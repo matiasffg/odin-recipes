@@ -1,0 +1,134 @@
+/* CSS para un estilo moderno, futurista y brutalista */
+
+body {
+    background-color: #f0f0f0; /* Fondo gris claro para buen contraste */
+    color: #333333; /* Texto oscuro */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1, h2 {
+    color: #000;
+    text-transform: uppercase;
+    margin: 20px 0;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid #000;
+    text-align: center; /* Alineación central para h2 y h1 */
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem; /* Tamaño de fuente mayor para h2 en la página principal */
+}
+
+ul, ol {
+    margin: 20px 0;
+    padding-left: 20px;
+    max-width: 600px;
+    width: 100%;
+    list-style: none;
+}
+
+ul li, ol li {
+    font-size: 1.5rem; /* Tamaño de fuente unificado para listas */
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border-left: 8px solid #000; /* Borde más grueso en las listas */
+    box-shadow: 4px 4px 0px #000;
+    text-align: center; /* Centrando el texto en las listas del home */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 80%;
+    max-width: 600px;
+}
+
+ul li:hover, ol li:hover {
+    background-color: #000;
+    color: #ffffff;
+    transform: translate(-4px, -4px); /* Efecto de desplazamiento al hacer hover */
+}
+
+ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+ul li:hover a {
+    color: #ffffff;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0;
+    box-shadow: 10px 10px 0px #000;
+}
+
+h2 + ul, h2 + ol {
+    border-top: 2px solid #000;
+    padding-top: 20px;
+}
+
+h2:last-of-type {
+    border-top: 2px solid #000;
+    padding-top: 20px;
+    margin-top: 40px;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff);
+}
+
+h1::after {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 4px;
+    background: #000;
+    margin: 10px auto 0;
+}
+
+h2::before {
+    content: '>';
+    color: #ff0000;
+    margin-right: 10px;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #555;
+    margin-top: 10px;
+}
+
+ul li::before, ol li::before {
+    content: '+';
+    color: #ff0000;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+h2:last-of-type::after {
+    content: '¡';
+    color: #ff0000;
+    font-size: 2rem;
+    margin-left: 10px;
+}
